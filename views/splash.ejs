@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smoothiverse</title>
+    <!-- Google Icon Fonts used by Materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- JavaScript for Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+
+<body class="body">
+    <div  class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper orange">
+            <a href="#!" class="brand-logo"><i class="material-icons">local_drink</i>SMOOTHIVERSE</a>
+            <ul class="right">
+              <li>
+                <% if (user) { %>
+                  <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                <% } else { %>
+                  <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                <% } %>
+               
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+      <hr>
+      <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <br><br>
+          <div class="row center"> <img src="../images/splash.png"></div>
+          
+        </div>
+      
+      
+</body>
+
+</html>

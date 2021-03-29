@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+   <br><br><br> 
+   <div class="section no-pad-bot" id="index-banner" >
+    <div class="container">
+      <br><br>
+      
+      <div class="row">
+    <form id="add-ingredient-form" action="/ingredients" method="POST">
+        <label>Ingredient:</label>
+        <input type="text" name="name">
+        <br><br><br>
+        <button class="btn-large waves-effect waves-light orange" type="submit" name="action">Add Ingredient
+            <i class="material-icons right">send</i>
+          </button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

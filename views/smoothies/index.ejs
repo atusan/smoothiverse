@@ -1,0 +1,58 @@
+<%- include('../partials/header') %>
+    
+    <p>Hello <%=user.name %></p>
+
+    <br>
+    <br>
+    <div class="section no-pad-bot" id="index-banner" >
+      <div class="container">
+        
+       
+        <div class="row center">
+          <form action="/filterTypes" method="POST">
+            <div class="input-field col s12">
+              <select name="type" id="selDataset">
+                 <option value="" disabled selected>Choose your option</option>
+                  <option value="green">Going Green</option>
+                  <option value="superfood">Superfood Smoothies</option>
+                  <option value="immunity">Immunity Boosters</option>  
+              </select>
+            </div>
+          
+          <br><br>
+          <button class="btn-large waves-effect waves-light orange" type="submit" name="action">Get Started
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+          <br><br><br><br>
+        <div class="row center">
+          <table id="list">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Created by</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% smoothies.forEach(function(s) { %>
+                <tr>
+                  <td><%= s.name %></td>
+                  <% if(s.userId[0]){ %>
+    
+                  <td><%= s.userId[0].name %></td>
+                  <% } %> 
+                  <td><a href="/smoothies/<%= s._id %>">DETAILS</a></td>
+                </tr>
+                <% }); %>
+              </tbody>
+            </table> 
+    
+        </div>
+        <br><br>
+       
+        
+        </body>  
+        </html>
+
+

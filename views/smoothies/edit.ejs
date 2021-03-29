@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+<div class="section no-pad-bot" id="index-banner" >
+  <div class="container">
+    <br><br>
+    
+    <div class="row">
+    <form action="/smoothies/<%= smoothie._id %>?_method=PUT" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" value="<%= smoothie.name %>">
+        <br><br><br>
+        <label>ingredients:</label>
+        <select multiple name="items">
+            <% ingredients.forEach(function(ing) { %>
+              <option value="<%=ing._id%>"><%= ing.name %></option>
+            <% }) %>
+          </select>
+        <br>
+        <label>Description:</label>
+        <input type="text" name="recipe" value="<%= smoothie.recipe %>">
+        <br>
+        <br>
+        <br>
+        <button class="btn-large waves-effect waves-light orange" type="submit" name="action">UPDATE
+          <i class="material-icons right">send</i>
+        </button>
+       
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

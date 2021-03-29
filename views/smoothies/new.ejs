@@ -1,0 +1,43 @@
+
+    <%- include('../partials/header') %>
+    <br><br> <br>
+    <div class="section no-pad-bot" id="index-banner" >
+      <div class="container">
+        <br><br>
+        
+        <div class="row">
+           
+          <form action="/smoothies" method="post">
+            
+              <lable>Please choose your ingredients from the list below if it not in the list <a href="/ingredients/new">click here</a> to add your ingredient first </lable>
+              <select multiple name="items">
+                <% ingredients.forEach(function(ing) { %>
+                  <option value="<%=ing._id%>"><%= ing.name %></option>
+                <% }) %>
+              </select>
+           
+            <br> 
+            <label>Smoothie name</label>
+            <input type="text" name="name">
+            <br><br>
+            <label>Type</label>
+            <select name="type">
+                <option value="green">Going Green</option>
+                <option value="superfood">Superfood Smoothies</option>
+                <option value="immunity">Immunity Boosters</option>  
+            </select>
+            <br><br>
+            <label>Recipe</label>
+            <textarea name="recipe"></textarea>
+            <br><br>
+            <button class="btn-large waves-effect waves-light orange" type="submit" name="action">ADD SMOOTHIE
+              <i class="material-icons right">send</i>
+            </button>
+            <!-- <input type="submit" value="Add Recipe"> -->
+          </form>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+

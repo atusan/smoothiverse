@@ -1,0 +1,28 @@
+.brand-logo {
+  margin-left: 15px;
+}
+
+/* .nav-wrapper { 
+  background: linear-gradient(to right,#2484b5,#164967) !important; 
+  
+}  */
+
+/* .nav-wrapper { 
+  background: #164967 !important; 
+  
+}  */
+
+/* .body{
+  background-color:#202e52;
+} */
+hr{
+  background-color:white;
+  border-width: 0px;
+  border-color: white;
+  height: 2px;
+  margin: 0px;
+}
+ul.dropdown-content.select-dropdown li span {
+  color:#164967; /* no need for !important :) */
+}
+
